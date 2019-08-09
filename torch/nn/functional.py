@@ -170,7 +170,7 @@ def conv3d(input, weight, bias=None, stride=1, padding=0, dilation=1, groups=1):
     """
     if isinstance(padding, str):
         padding_calc = [_compute_padding_same(input.size(), 0, weight, stride, dilation),
-                        _compute_padding_same(input.size(), 1, weight, stride, dilation)
+                        _compute_padding_same(input.size(), 1, weight, stride, dilation),
                         _compute_padding_same(input.size(), 2, weight, stride, dilation)
                         ]
         final_padding = [padding_calc[0]//2, (padding_calc[0]+1)//2,
